@@ -1,6 +1,21 @@
-const View = // require appropriate file
-const Game = // require appropriate file
+const View = require("./ttt-view.js")
+const Game = require("../ttt_node/game.js")
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Your code here
+  
+  const game = new Game();
+  window.game = game;
+
+  const figure = document.querySelector('figure');
+  window.figure = figure;
+
+  const view = new View(game, figure)
+  window.view = view
+
+
+  // view.grid.addEventListener('hover', () => {
+
+  // })
+
+  
 });
