@@ -1,0 +1,18 @@
+li {
+    font-size: 100px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family:fantasy;
+}
