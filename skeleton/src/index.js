@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const view = new View(game, figure)
   window.view = view
 
-
+  // view.bindEvents();
   // view.grid.addEventListener('hover', () => {
 
   // })

@@ -4,7 +4,7 @@
   "description": "Tic-Tac-Toe",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --watch --mode=development" 
+    "start": "webpack --watch --mode=development"
   },
   "keywords": [],
   "author": "Sean & Milner",

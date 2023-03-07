@@ -1,9 +1,9 @@
 class View {
   constructor(game, el) {
-    this.game = game
-    this.el = el
+    this.game = game;
+    this.el = el;
 
-    el.append(this.setupBoard())
+    el.append(this.setupBoard());
 
   }
 
@@ -37,15 +37,35 @@ class View {
         event.target.style.backgroundColor = 'lightgray';
       }
     })
+    this.grid = grid;
+
+    this.bindEvents();
 
     return grid;
   }
   
-  bindEvents() {}
+  bindEvents() {
+    // debugger;
+    this.grid.addEventListener('click', event => {
+      this.handleClick(event);
+    })
+  }
 
-  handleClick(e) {}
+  handleClick(e) {
+    let tile = e.target;
+    // let oldPlayer = this.game.currentPlayer.duplicate
+    let square = tile.getAttribute('data-pos');
+    this.makeMove(square.split(",").map(el => parseInt(el)));
+    tile.style.backgroundColor = 'white';
+    tile.innerText = this.game.currentPlayer;
 
-  makeMove(square) {}
+  }
+  
+  makeMove(square) {
+    // let tile = document.querySelector(`li[data-pos="${square}"]`);
+    // debugger;
+    this.game.playMove(square, this.game.currentPlayer);
+  }
 
 }
 
